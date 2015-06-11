@@ -14,7 +14,8 @@ require_relative "../models/address_book"
      puts "2 - Create an entry"
      puts "3 - Search for an entry"
      puts "4 - Import entries from a CSV"
-     puts "5 - Exit"
+     puts "5 - View Entry by Numer"
+     puts "6 - Exit"
      print "Enter your selection: "
  
  # #3
@@ -37,6 +38,17 @@ require_relative "../models/address_book"
        read_csv
        main_menu
      when 5
+      puts "Enter an entry number"
+      search_entries_by_number
+      main_menu
+
+    else
+      system "clear"
+      puts "Sorry, that is not a valid input"
+    end
+
+
+     when 6
        puts "Good-bye!"
  # #8
        exit(0)
